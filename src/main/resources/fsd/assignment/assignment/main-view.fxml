@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+
+<?import javafx.scene.control.ChoiceBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="fsd.assignment.assignment.Controller" fx:id="mainWindow">
+
+    <top>
+        <GridPane hgap="20" vgap="20">
+
+            <Label text="StudentID" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="studId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Module Option 1" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <ChoiceBox fx:id="mod1Choice" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+            <Label text="Year of Study" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="yearStudy" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Module Option 2" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <ChoiceBox fx:id="mod2Choice" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+            <Label text="Module Option 3" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            <ChoiceBox fx:id="mod3Choice" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+            <Button onAction="#addStudentData" text="Add..." GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text=" " fx:id="validateStudent" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+
+        </GridPane>
+    </top>
+
+
+    <left>
+        <VBox>
+
+            <Label>
+            </Label>
+
+            <ListView fx:id="studentListView"/>
+
+            <Label>
+            </Label>
+
+        </VBox>
+    </left>
+
+    <bottom>
+        <VBox>
+            <GridPane hgap="20">
+
+                <Label text="Year of Study" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label text="Module Option 1" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Module Option 2" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <Label text="Module Option 3" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                <Label text=" " fx:id="yearStudyView" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label text=" " fx:id="mod1View" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text=" " fx:id="mod2View" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <Label text=" " fx:id="mod3View" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+            </GridPane>
+        </VBox>
+    </bottom>
+
+</BorderPane>
